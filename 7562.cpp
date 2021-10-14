@@ -24,7 +24,7 @@ int main(void) {
 		cin >> x1 >> y1 >> x2 >> y2;
 		q.push({ x1,y1 });
 		vis[x1][y1] = 1;
-		while (!q.empty()) {
+		while (vis[x2][y2]==0) {
 			pair<int, int> cur = q.front(); q.pop();
 			for (int i = 0; i < 8; i++) {
 				int nx = cur.x + dx[i];
