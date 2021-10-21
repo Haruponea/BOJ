@@ -9,20 +9,9 @@ int pre[9];
 bool isused[9];
 void func(int level) {
 	if (level == m) {
-		bool possible = false;
-		for (int i = 0; i < m; i++) {
-			if (ans[i] != pre[i]) {
-				possible = true;
-				break;
-			}
-		}
-		if (possible) {
-			for (int i = 0; i < m; i++) {
-				cout << ans[i] << ' ';
-				pre[i] = ans[i];
-			}
-			cout << '\n';
-		}
+		for (int i = 0; i < m; i++)
+			cout << ans[i] << ' ';
+		cout << '\n';
 	}
 	int prenum = 0;
 	for (int i = 0; i < n; i++) {
