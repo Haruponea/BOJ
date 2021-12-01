@@ -21,8 +21,8 @@ int main(void) {
         else {
             for (int j = 0; j <= w; j++) {
                 if (j == 0) {
-                    dp[i][a][j] = dp[i - 1][a][j] + 1;
-                    dp[i][1 - a][j] = dp[i - 1][1 - a][j];
+                    if(a==0)
+                        dp[i][a][j] = dp[i - 1][a][j] + 1;
                 }
                 else {
                     dp[i][a][j] = max(dp[i - 1][a][j], dp[i - 1][1-a][j - 1]) + 1;
